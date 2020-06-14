@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ENG1.2</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./human_standard_token_abi.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="center" id="stuAccess">
+        <h1>ENG 1.2 - Essay</h1>
+        <p>Enter your Student Address and password:</p>
+        <p>Address: <input type="text" size="50" id="address"/></p>
+        <p>Password: <input type="text" size="50" id="studentPassword"/></p>
+        <p id="currentMessage"></p>
+        <div class="center">
+            <button id="check" type="button" onClick="studentAccess();"> Check access </button>
+        </div>
+    </div>
+
+    <div class="center" id="showTest">
+        <h1>English Test</h1>
+        <p>Answer the following questions.</p>
+        <ul style=list-style:none>
+            <li style="color: antiquewhite;">1. Describe something <input id="Qn1"></li> 
+            <li style="color: antiquewhite;">2. Explain something <input id="Qn2"></li>
+            <li style="color: antiquewhite;">3. Discuss something <input id="Qn3"></li>
+        </ul>
+        <button onClick="markNow();">Submit answers</button>
+    </div>
+
+    <div class ="center" id="markTest">
+        <p>Teacher - mark the test now.</p>
+        <ul style=list-style:none>
+            <li style="color: antiquewhite;">1. <input size ="5" id="grade1"></li> 
+            <li style="color: antiquewhite;">2. <input size ="5" id="grade2"></li>
+            <li style="color: antiquewhite;">3. <input size = "5" id="grade3"></li>
+        </ul>
+        <button id="submit">Submit grades</button>
+        <p id="printResult"></p>
+        <script>
+            const question1 = document.querySelector("#grade1");
+            const question2 = document.querySelector("#grade2");
+            const question3 = document.querySelector("#grade3");
+            const printResult = document.querySelector("#printResult");
+
+            submit.addEventListener("click", mark);
+
+            function mark() {
+                let score = 0;
+                if (question1.value == "A") {
+                    score += 1;
+                }
+                if (question2.value == "M") {
+                    score += 1;
+                }
+                if (question3.value == "E") {
+                    score += 1;
+                }
+                printResult.innerHTML = score;
+            };
+        </script>
+        <div class="center">
+            <button type="button" onClick="getERC20Balance();"> Send to blockchain </button>
+        </div>
+
+    <div id="output2"></div>
+    </div>
+
+    <script type="text/javascript" src="./eng.js"></script>
+
+</body>
+</html>

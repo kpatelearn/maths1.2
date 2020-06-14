@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Qualifications</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./human_standard_token_abi.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="wallet.css">
+</head>
+<body>
+<h1>My Qualifications</h1>
+
+<div class="center" id="stuAccess">
+    <p>Enter your Student Address and password:</p>
+    <p>Address: <input type="text" size="50" id="address"/></p>
+    <p>Password: <input type="text" size="50" id="studentPassword"/></p>
+    <div class="center">
+        <button id="check" type="button" onClick="getERC20Balance();"> Submit </button>
+    </div>
+</div>
+
+<div id="output2"></div>
+
+<div id="output3"></div>
+
+<script type="text/javascript" src="./wallet.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MAT1.2</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./human_standard_token_abi.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<h1>MAT1.2 - Addition</h1>
+
+<div class="menu">
+    <a href="eng1.2.html">English Demo</a>
+    <a href="wallet.html">Wallet Demo</a>
+</div>
+
+
+<div class="center" id="stuAccess">
+    <p>Enter your Student Address and password:</p>
+    <p>Address: <input type="text" size="50" id="address"/></p>
+    <p>Password: <input type="text" size="50" id="studentPassword"/></p>
+    <div class="center">
+        <button id="check" type="button" onClick="studentAccess();"> Check access </button>
+    </div>
+</div>
+
+    <p id="currentMessage"></p>
+
+    <div class="center" id="testCode">
+        <p>Assessment code</p><input id="testCodeInstance">
+        <div class="center">
+            <button id="checkCode" type="button" onClick="testCodeFunc();"> Submit </button>
+        </div>  
+        <p id="codeChoice"></p> 
+    </div>
+
+    <div class="center" id="assessorAuthentication">
+        <p>Assessor Address: <input type="text" size="50" id="assessorAddress"/></p>
+        <div class="center">
+            <button id="check" type="button" onClick="checkAssessor();"> Submit </button>
+        </div> 
+        <p id="assessorResponse"></p>  
+    </div>
+
+    <div class="center" id="showTest">
+        <h1>Addition Test</h1>
+        <p>Answer the following questions as best you can.</p>
+        <ul style="text-align: center;">
+            <li style="color: antiquewhite;">What is 1 + 1 <input id="Qn1"></li> 
+            <li style="color: antiquewhite;">What is 2 + 2 <input id="Qn2"></li>
+            <li style="color: antiquewhite;">What is 3 + 3 <input id="Qn3"></li>
+        </ul>
+        <button id="submit">Submit answers</button>
+        <p>Your total score is</p>
+        <p id="printResult">Pending</p>
+
+        <script>
+            const question1 = document.querySelector("#Qn1");
+            const question2 = document.querySelector("#Qn2");
+            const question3 = document.querySelector("#Qn3");
+            const printResult = document.querySelector("#printResult");
+
+            submit.addEventListener("click", mark);
+
+            function mark() {
+                let score = 0;
+                if (question1.value == "2") {
+                    score += 1;
+                }
+                if (question2.value == "4") {
+                    score += 1;
+                }
+                if (question3.value == "6") {
+                    score += 1;
+                }
+                printResult.innerHTML = score;
+            };
+        </script>
+        <div class="center">
+            <button type="button" onClick="getERC20Balance();"> Submit </button>
+        </div>
+    </div>
+
+    <div id="output2"></div>
+
+    <script type="text/javascript" src="./main.js"></script>
+
+</body>
+</html>

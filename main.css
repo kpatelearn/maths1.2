@@ -1,0 +1,38 @@
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    text-align: center;
+    color: cornsilk;
+}
+
+p {
+    text-align: center;
+    color: cornsilk;
+}
+
+#output2 {
+    text-align: center;
+    color: cornsilk;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+  }
+
+.menu {
+    overflow: hidden;
+    text-align: center;
+    font-size: x-large;
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  a {
+      color: whitesmoke;
+  }
